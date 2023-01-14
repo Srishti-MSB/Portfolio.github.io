@@ -12,7 +12,7 @@ box-sizing: border-box;
 text-decoration: none ;
 outline: none;
 border: none;
-text-transform: capitalize;
+/* text-transform: capitalize; */
 transition: all .2s linear;
 }
 
@@ -170,6 +170,9 @@ header .nav-bar ul li a:hover{
         width: 100%;
     }
     .conatiner .left-contact{
+        width: 100%;
+    }
+    .heading .work-list .work{
         width: 100%;
     }
     .form{
@@ -414,8 +417,8 @@ section{
 
 .layer h3{
     /* border: 2px solid blue; */
-    font-size: 10px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
     /* margin-top: 1px; */
     /* margin-bottom: 20px; */
     /* background: #222; */
