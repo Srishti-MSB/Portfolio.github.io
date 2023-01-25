@@ -19,28 +19,17 @@ $(document).ready(function(){
 
 
 
-
-const form = document.querySelector('.contact-form');
-function senMsg(e){
-    e.preventDefault();
-    
-    const name1 = Document.querySelector('.name1');
-    email = Document.querySelector('.email');
-    project = Document.querySelector('.project');
-    message = Document.querySelector('.message');
-
-    
-    Email.send({
-        SecureToken : "b71291dc-466d-45bb-a6b9-70d772fe5bb0 ",
-        To : 'srishtisharma861.hitcse52020@gmail.com',
-        From : email.value,
-        Subject : "Contact Form",
-        Body : message.value
-    }).then(
-      message => alert("ok")
-    );
+// email js
+function sendMail(){
+    var params = {
+        from_name : document.getElementById("name").value,
+        email_id : document.getElementById("email").value,
+        project : document.getElementById("project").value,
+        message : document.getElementById("message").value
+    }
+    emailjs.send("service_77bb4sf","template_0hjuc7c",params).then(function (res){
+        alert("Succesfully sent! "+res.status);
+    })
 }
-
-form .addEventListener('submit' ,senMsg);
 
     
